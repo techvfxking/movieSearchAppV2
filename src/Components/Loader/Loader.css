@@ -1,44 +1,25 @@
-.loader-wrapper {
-    height: 50vh;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .res-loader .loader-wrapper {
-    height: 80vh;
-    background-color: white;
-  }
-
-  .dark .res-loader .loader-wrapper{
-    background-color: white;
-  }
-  
-  .dark .loader-wrapper{
-      background-color: white;
-  }
-  
-  .loader-wrapper .loader {
+#loading {
     width: 5rem;
     height: 5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 7px solid;
-    border-color: white transparent;
-    animation: rotate 2s linear infinite;
-  }
-  
-  .dark .loader-wrapper   .loader {
-      border-color: white transparent;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    border: 5px solid var(--white);
+    border-top: 6px solid var(--2nd-Color);
+    z-index: 999;
+    position: fixed;
+    border-radius: 100%;
+    align-items: center;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
-    100% {
-      transform: rotate(360deg);
+    to {
+        transform: rotate(360deg);
     }
-  }
-  
+}

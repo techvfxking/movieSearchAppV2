@@ -3,38 +3,13 @@
     height: 100%;
     min-height: 100vh;
     padding: 50px 0px;   
+    /* background-image: linear-gradient(var(--black) 50%, var(--2nd-Color) 50%);
+    background-repeat: no-repeat; */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: overlay;
   }
-  #loading {
-    width: 5rem;
-    height: 5rem;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    bottom: 50%;
-    border: 5px solid var(--white);
-    border-top: 6px solid var(--2nd-Color);
-    z-index: 999;
-    position: fixed;
-    border-radius: 100%;
-    align-items: center;
-    visibility: hidden;
-    animation: spin 1s infinite linear;
-}
-#loading.display {
-    visibility: visible;
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
   .container-movie {
     font-size: 16px;
     width:95vw;

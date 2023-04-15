@@ -6,6 +6,18 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+:root {
+  --text-clr: #4a5c6c;
+  --bg-clr: #f2f4fc;
+  --border-clr: rgb(156, 176, 193);
+  --dim-grey: #a0a0a0;
+  --black: #000000;
+  --2nd-Color: #ffb92a;
+  --white: #ffffff;
+  --dim-Black: #201f28;
+  --shadow-Color1: rgba(0, 0, 0, 0.2);
+}
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -18,17 +30,7 @@
   ::-webkit-scrollbar-track {
     background: var(--dim-Black);
   }
-:root {
-  --text-clr: #4a5c6c;
-  --bg-clr: #f2f4fc;
-  --border-clr: rgb(156, 176, 193);
-  --dim-grey: #a0a0a0;
-  --black: #000000;
-  --2nd-Color: #ffb92a;
-  --white: #ffffff;
-  --dim-Black: #201f28;
-  --shadow-Color1: rgba(0, 0, 0, 0.2);
-}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', 'Roboto', 'Oxygen',
@@ -43,8 +45,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(var(--black) 50%, var(--2nd-Color) 50%);
-  background-repeat: no-repeat;
+  background-color: white
 }
 
 .movieCard-h2 {
@@ -55,7 +56,7 @@ body {
 }
 .movieCard-h2-search {
   font-family: "Lora", serif;
-  color: white;
+  color:var(--text-clr);
   font-size: 2rem;
   transition: all 0.5s linear;
 }
@@ -143,7 +144,7 @@ a {
   font-size: 1.8rem;
   border-radius: 0.5rem;
   transition: all 0.3s linear;
-  box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+box-shadow: 1.2em 2em 3em var(--dim-Black);
 }
 
 a:hover {
