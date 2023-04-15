@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import './MovieDetail.css'
 import { API_BASE_URL } from '../../Hooks/Context'
 import Loader from './../Loader/Loader';
-import { useGlobalRoutePathObject } from '../../Helper/PathHelper';
+import { useGlobalImageObject, useGlobalRoutePathObject } from '../../Helper/PathHelper';
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -33,7 +33,7 @@ const MovieDetail = () => {
   }, []);
   if (isLoading) {
     return (
-      <Loader/>
+      <Loader />
     )
   }
   return (
@@ -41,24 +41,44 @@ const MovieDetail = () => {
   )
 }
 
-const ReturnMovieDetailJSX = (movie) => {
+const ReturnMovieDetailJSX = (data) => {
   return (
-    <section className='movie-section'>
-      <div className="movie-card">
-        <figure>
-          <img src={movie.Poster} alt="" />
-        </figure>
-        <div className="card-content">
-          <p className="title">{ movie.Title}</p>
-          <p className="card-text">{movie.Released}</p>
-          <p className="card-text">{movie.Genre}</p>
-          <p className="card-text">{movie.Language}</p>
-          <p className="card-text">{movie.Metascore}</p>
-          <p className="card-text">{movie.Plot}</p>
-          <NavLink to={useGlobalRoutePathObject.Home} className="back-btn">Go Back</NavLink>
+    <section className="body">
+      <div className="container-movie">
+        <div id="result">
+          <div className="info">
+            <img src={data.Poster} className="poster" />
+            <div>
+              <h2>{data.Title}</h2>
+              <div className="rating">
+                <img src={useGlobalImageObject.StarIcon} />Ratings:
+                <h4>{data.imdbRating}</h4>
+                <img src={useGlobalImageObject.ImdbIcon} />Votes:
+                <h4>{data.imdbVotes}</h4>
+              </div>
+              <div className="details">
+                <span>{data.Rated}</span>
+                <span>{data.Year}</span>
+                <span>{data.Runtime}</span>
+              </div>
+              <div className="genre">
+                <div>{data.Genre}</div>
+              </div>
+            </div>
+          </div>
+          <h3>Plot:</h3>
+          <p>{data.Plot}</p>
+          <h3>Cast:</h3>
+          <p>{data.Actors}</p>
+          <h3>Awards:</h3>
+          <p>{data.Awards}</p>
+          <h3>BoxOffice: <p>{data.BoxOffice == null ? "Not Found" : data.BoxOffice}</p></h3>
+          <h3>Writer:</h3>
+          <p>{data.Writer}</p>
         </div>
       </div>
     </section>
+
   );
 }
 

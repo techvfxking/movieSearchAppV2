@@ -6,7 +6,7 @@ const MovieCard = (props) => {
     return (
         <div className="card">
             <div className="card-info">
-                <h2>{props.Title}</h2>
+                <h2 className='movieCard-h2'>{props.Title}</h2>
                 {imgJSX}
             </div>
         </div>
@@ -20,6 +20,7 @@ const ReturnImgJSX = (poster, imdbID) => {
             <img src={poster}
                 alt={imdbID}
                 style={{ width: "20rem" }}
+                className='movieCard-img'
             />
         )
     }
@@ -27,6 +28,7 @@ const ReturnImgJSX = (poster, imdbID) => {
         return (
             <img src={poster}
                 alt={imdbID}
+                className='movieCard-img'
             />
         )
     }

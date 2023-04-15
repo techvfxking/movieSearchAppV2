@@ -1,6 +1,6 @@
 .loader-wrapper {
     height: 50vh;
-    background-color: var(--bg-color);
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,15 +8,15 @@
 
   .res-loader .loader-wrapper {
     height: 80vh;
-    background-color: var(--bg-color);
+    background-color: white;
   }
 
   .dark .res-loader .loader-wrapper{
-    background-color: #0a0a0a;;
+    background-color: white;
   }
   
   .dark .loader-wrapper{
-      background-color: #0a0a0a;
+      background-color: white;
   }
   
   .loader-wrapper .loader {
@@ -25,12 +25,12 @@
     background-color: transparent;
     border-radius: 50%;
     border: 7px solid;
-    border-color: var(--color-green) transparent;
+    border-color: white transparent;
     animation: rotate 2s linear infinite;
   }
   
   .dark .loader-wrapper   .loader {
-      border-color: var(--color-blue) transparent;
+      border-color: white transparent;
   }
   
   @keyframes rotate {

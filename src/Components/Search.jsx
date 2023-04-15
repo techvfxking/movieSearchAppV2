@@ -7,7 +7,7 @@ const Search = () => {
   return (
     <div>
       <section className="search-section">
-        <h2>Search Your Favourite Movie</h2>
+        <h2 className='movieCard-h2-search'>Search Your Favourite Movie</h2>
         <form action="#" onSubmit={(e) => e.preventDefault()}>
           <input type="text" placeholder="Search here"
             value={search}
