@@ -11,11 +11,11 @@
     background-color: var(white);
   }
 
-  .dark .res-loader .loader-wrapper{
+ .res-loader .loader-wrapper{
     background-color: #0a0a0a;;
   }
   
-  .dark .loader-wrapper{
+.loader-wrapper{
       background-color: #0a0a0a;
   }
   
