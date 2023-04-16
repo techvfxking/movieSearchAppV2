@@ -1,8 +1,10 @@
 import React from 'react'
-import './loader.css'
+import './Loader.css'
 const Loader = () => {
     return (
-        <div id="loading"></div>
+        <div className="loader-wrapper">
+            <div className="loader"></div>
+        </div>
     )
 }
 

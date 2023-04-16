@@ -11,8 +11,8 @@ const AppProvider = ({ children }) => {
     const [search, setSearch] = useState("");
 
     const getMovies = async (url) => {
+        setIsLoading(true);
         try {
-            setIsLoading(true);
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
@@ -27,7 +27,7 @@ const AppProvider = ({ children }) => {
                 setIsLoading(false),
                 setIsError({
                     showError: true,
-                    errorMessage: data.Error
+                    errorMessage: data.Error.includes("Too many results") ? "No Data found" : data.Error
                 }),
                     setMovies([
                         {

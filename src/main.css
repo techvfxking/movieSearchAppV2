@@ -17,6 +17,9 @@
   --white: #ffffff;
   --dim-Black: #201f28;
   --shadow-Color1: rgba(0, 0, 0, 0.2);
+  --bg-color: #eaeaea;
+  --color-green: #4bbc54;
+  --color-blue: #1cacf4;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -143,16 +146,26 @@ a {
   background-color: #f2f4fc;
   font-size: 1.8rem;
   border-radius: 0.5rem;
-  transition: all 0.3s linear;
-box-shadow: 1.2em 2em 3em var(--dim-Black);
+  transition : all 0.4s linear;
+  box-shadow : 0px 0.5rem 1rem rgba(0,0,0,0.2)
 }
 
 a:hover {
   background-color: var(--text-clr);
   color: var(--bg-clr);
-   box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+  box-shadow:none;
 }
-
+.navbarTop{
+  text-align: left;
+  justify-content:left;
+  color: var(--bg-clr);
+  background-color: #201f28;
+  padding: 1rem 1rem;
+}
+.navbarTop .navbar-h2{
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
 a:hover .movieCard-h2 {
   color: var(--bg-clr);
   transform: translateY(-1.5rem);
